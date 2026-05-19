@@ -372,6 +372,88 @@ span {
     width: 50px;
 }
 
+
+/* ================= STYLE DE LA SECTION CERTIFICAT ================= */
+.Certificat {
+    padding: 100px 9% 100px;
+    background: var(--bg-color); /* Utilise la couleur de fond par défaut de ton site */
+}
+
+.certificat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.certificat-box {
+    flex: 1 1 45rem;
+    background: var(--snd-bg-color); /* Utilise la couleur secondaire de tes boîtes */
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.certificat-box:hover {
+    border-color: var(--main-color); /* Ta couleur principale (souvent le bleu/cyan ou vert de ton site) */
+    transform: scale(1.02);
+}
+
+.cert-icon {
+    font-size: 7rem;
+    color: #049fd9; /* Le bleu distinctif de Cisco pour faire ressortir le badge */
+    margin-bottom: 1rem;
+}
+
+.cert-tag {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--main-color);
+    font-weight: 600;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.certificat-box h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.certificat-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+    line-height: 1.6;
+}
+
+/* Bouton spécifique pour ouvrir le lien */
+.btn-cert {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #049fd9;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem #049fd9;
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.btn-cert:hover {
+    box-shadow: none;
+    background: #037fae;
+}
+
+
+
+
+
 .Services {
     background: var(--bg-color);
     color: rgb(167, 164, 164);
@@ -670,4 +752,184 @@ span {
     width: 50px;
     height: 50px;
     text-align: center;
+}
+
+
+
+/* ================= STYLE DE LA SECTION CERTIFICAT ================= */
+.Certificat {
+    background: var(--bg-color);
+}
+
+.Certificat h2 {
+    margin-bottom: 5rem;
+}
+
+.certificat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificat-box {
+    background-color: var(--second-bg-color);
+    min-height: 400px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem;
+}
+
+/* Effet Hover identique à tes Services */
+.certificat-box:hover {
+    background: var(--text-color); /* Devient blanc au survol */
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+/* Couleur verte calquée sur ton badge Cisco Verified */
+.cert-icon {
+    font-size: 6.5rem;
+    color: #24a148; /* Vert Cisco Cyber */
+    margin-bottom: 1.5rem;
+    transition: 0.4s ease-in-out;
+}
+
+.certificat-box:hover .cert-icon {
+    color: #1e7e34; /* Vert plus sombre quand le fond devient blanc */
+}
+
+.cert-tag {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.certificat-box:hover .cert-tag {
+    color: #008b82; /* Maintien du contraste sur fond blanc */
+}
+
+.certificat-info h4 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.cert-date {
+    font-size: 1.4rem;
+    color: #888;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.certificat-box:hover .cert-date {
+    color: #555;
+}
+
+.cert-desc {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cert-id {
+    display: block;
+    font-size: 1.2rem;
+    font-family: monospace;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+/* Bouton aligné sur ton style .btn principal */
+.btn-cert {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-cert:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+/* Inversion des couleurs du bouton au survol de la box */
+.certificat-box:hover .btn-cert {
+    background: black;
+    color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+
+
+
+/* Conteneur pour aligner les boutons côte à côte */
+.cert-buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap; /* Permet de passer l'un sous l'autre proprement sur téléphone */
+    width: 100%;
+}
+
+/* Style de base ajusté pour les boutons dans la box */
+.btn-cert {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem; /* Espace entre l'icône et le texte */
+    padding: 1rem 2rem;
+    background: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.4rem;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+/* Style du deuxième bouton (fond transparent pour créer un contraste sympa) */
+.btn-secondary-cert {
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: none;
+}
+
+/* Animations au survol de la boîte complète */
+.certificat-box:hover .btn-cert {
+    background: black;
+    color: var(--main-color);
+}
+
+.certificat-box:hover .btn-secondary-cert {
+    background: var(--main-color);
+    color: black;
+}
+
+/* Animations au survol individuel des boutons */
+.btn-cert:hover {
+    transform: scale(1.05);
 }
