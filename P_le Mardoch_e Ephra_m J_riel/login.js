@@ -4,16 +4,18 @@ const validCredentials = {
     password: 'NeriyaME@1'
 };
 
-const pageName = window.location.pathname.split('/').pop();
+// Détection du nom de fichier plus robuste (compatible avec serveur en ligne)
+const pageName = window.location.pathname.split('/').pop() || 'index.html';
+const pageNameLower = pageName.toLowerCase();
 const isLoggedIn = localStorage.getItem(storageKey) === 'true';
 
 // Vérification immédiate pour Admin.html
-if (pageName === 'Admin.html' && !isLoggedIn) {
+if (pageNameLower === 'admin.html' && !isLoggedIn) {
     window.location.replace('login.html');
 }
 
 // Redirection si déjà connecté sur login.html
-if (pageName === 'login.html' && isLoggedIn) {
+if (pageNameLower === 'login.html' && isLoggedIn) {
     window.location.replace('Admin.html');
 }
 
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginError = document.getElementById('loginError');
     const loginSuccess = document.getElementById('loginSuccess');
 
-    if (pageName === 'login.html' && sessionStorage.getItem('loggedOut') === 'true') {
+    if (pageNameLower === 'login.html' && sessionStorage.getItem('loggedOut') === 'true') {
         if (loginSuccess) {
             loginSuccess.classList.remove('hidden');
         }
