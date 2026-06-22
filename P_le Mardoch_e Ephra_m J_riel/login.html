@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Admin</title>
+    <link rel="stylesheet" href="Style.css">
+    <script>
+        if (localStorage.getItem('adminLoggedIn') === 'true') {
+            window.location.href = 'Admin.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="login-page">
+        <div class="login-card">
+            <h1>Connexion</h1>
+            <form id="loginForm">
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" type="email" placeholder="admin@admin.com" required>
+
+                <label for="loginPassword">Mot de passe</label>
+                <input id="loginPassword" type="password" placeholder="Mot de passe" required>
+
+                <div id="loginError" class="login-error hidden">Email ou mot de passe invalide.</div>
+                <div id="loginSuccess" class="login-success hidden">Déconnexion réussie. Reconnecte-toi avec ton email.</div>
+
+                <button type="submit" class="btn">Se connecter</button>
+            </form>
+            <p class="login-note">Utilise ton email et ton mot de passe personnel.</p>
+        </div>
+    </div>
+    <script src="login.js" defer></script>
+</body>
+</html>

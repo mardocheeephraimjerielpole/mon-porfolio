@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Tableau de bord</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<script src="login.js"></script>
+<header class="header">
+    <a href="Index.html" class="logo">Admin</a>
+    <i class='bx bx-menu' id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="Index.html">Retour</a>
+        <a href="#dashboard" class="active">Dashboard</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#educationAdmin">Éducation</a>
+        <a href="#certificatesAdmin">Certificats</a>
+        <a href="#servicesAdmin">Services</a>
+        <a href="#testimonialsAdmin">Témoignages</a>
+        <a href="#messages">Messages</a>
+        <a href="#" id="logoutLink">Déconnexion</a>
+    </nav>
+</header>
+
+<section class="admin-dashboard" id="dashboard">
+    <h2 class="heading">Tableau de bord</h2>
+    <div class="admin-cards">
+        <div class="admin-card">
+            <h3>Total des messages</h3>
+            <p id="messageCount">0</p>
+        </div>
+        <div class="admin-card">
+            <h3>Dernier message</h3>
+            <p id="latestMessage">Aucun message</p>
+        </div>
+        <div class="admin-card">
+            <h3>Actions</h3>
+            <button id="clearMessagesBtn" class="btn">Supprimer tout</button>
+        </div>
+    </div>
+</section>
+
+<section class="admin-portfolio" id="portfolio">
+    <h2 class="heading">Gestion du portfolio</h2>
+    <div class="portfolio-controls">
+        <div class="portfolio-inputs">
+            <input id="skillName" type="text" placeholder="Nouvelle compétence" required>
+            <textarea id="skillDescription" rows="4" placeholder="Description de la compétence" required></textarea>
+        </div>
+        <button id="addSkillBtn" class="btn">Ajouter compétence</button>
+    </div>
+    <div id="skillsAdminList" class="skills-admin-list"></div>
+</section>
+
+<section class="admin-education" id="educationAdmin">
+    <h2 class="heading">Gestion de l’éducation</h2>
+    <div class="admin-section">
+        <input id="educationYear" type="text" placeholder="Année / Période" required>
+        <input id="educationTitle" type="text" placeholder="Titre de l’événement" required>
+        <textarea id="educationDescription" rows="3" placeholder="Description" required></textarea>
+        <button id="addEducationBtn" class="btn">Ajouter / modifier</button>
+    </div>
+    <div id="educationAdminList" class="skills-admin-list"></div>
+</section>
+
+<section class="admin-certificates" id="certificatesAdmin">
+    <h2 class="heading">Gestion des certificats</h2>
+    <div class="admin-section">
+        <input id="certificateTag" type="text" placeholder="Tag du certificat" required>
+        <input id="certificateTitle" type="text" placeholder="Titre du certificat" required>
+        <input id="certificateDate" type="text" placeholder="Date d’obtention" required>
+        <textarea id="certificateDescription" rows="3" placeholder="Description" required></textarea>
+        <input id="certificateFileLink" type="text" placeholder="Lien PDF certificat" required>
+        <input id="certificateBadgeLink" type="text" placeholder="Lien badge / détails" required>
+        <button id="addCertificateBtn" class="btn">Ajouter / modifier</button>
+    </div>
+    <div id="certificatesAdminList" class="skills-admin-list"></div>
+</section>
+
+<section class="admin-services" id="servicesAdmin">
+    <h2 class="heading">Gestion des services</h2>
+    <div class="admin-section">
+        <input id="serviceIcon" type="text" placeholder="Classe icon (bx bx-laptop)" required>
+        <input id="serviceTitle" type="text" placeholder="Titre du service" required>
+        <textarea id="serviceDescription" rows="3" placeholder="Description" required></textarea>
+        <button id="addServiceBtn" class="btn">Ajouter / modifier</button>
+    </div>
+    <div id="servicesAdminList" class="skills-admin-list"></div>
+</section>
+
+<section class="admin-testimonials" id="testimonialsAdmin">
+    <h2 class="heading">Gestion des témoignages</h2>
+    <div class="admin-section">
+        <input id="testimonialImage" type="text" placeholder="URL de l’image" required>
+        <input id="testimonialName" type="text" placeholder="Nom" required>
+        <input id="testimonialRating" type="number" min="1" max="5" placeholder="Note 1-5" required>
+        <textarea id="testimonialText" rows="4" placeholder="Témoignage" required></textarea>
+        <button id="addTestimonialBtn" class="btn">Ajouter / modifier</button>
+    </div>
+    <div id="testimonialsAdminList" class="skills-admin-list"></div>
+</section>
+
+<section class="admin-messages" id="messages">
+    <h2 class="heading">Messages reçus</h2>
+    <div id="savedMessages" class="messages hidden">
+        <div id="messagesList"></div>
+        <p class="message-hint">Clique sur le bouton supprimer pour supprimer un message.</p>
+    </div>
+    <div id="emptyState" class="empty-state">
+        <p>Aucun message trouvé. Les messages envoyés depuis le formulaire de contact apparaîtront ici.</p>
+    </div>
+</section>
+
+<script src="login.js" defer></script>
+<script src="Script.js" defer></script>
+</body>
+</html>
